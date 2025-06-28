@@ -27,7 +27,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Stopwatch</h2>
-        <h3>Time: {timer}</h3>
+        <h3>  Time: {String(Math.floor(timer / 60)).padStart(2, '0')}:
+  {String(timer % 60).padStart(2, '0')}</h3>
         <div>
           <button type="button" onClick={handleStartStop}>
             {isRunning ? "Stop" : "Start"}
